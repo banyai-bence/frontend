@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTunes zenelejatszo</title>
+    <style>
+        table tr:nth-child(even){
+            background-color: #ddd;
+        }
+        table .zene-td{
+            cursor: pointer;
+        }
+        table .zene-td:hover{
+            text-decoration: underline;
+            color: blueviolet;
+        }
+        table img{
+            width: 100%;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        @keyframes spin{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #boritokep{
+            border-radius: 50px;
+            transform-origin: center;
+            animation: spin 15s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>iTunes zene kereső és lejátszó</h1>
+    <h2>Mit keressek meg:</h2>
+    <input type="text" id="keresett">
+    <button id="kereses">Kereses</button>
+
+    <br/><br/>
+    <audio controls autoplay id="zene"></audio>
+    <img id="boritokep" />
+    <br/>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Sorszam</th>
+                <th>Eloado</th>
+                <th>Borítókép</th>
+                <th>Zene cime</th>
+                <th>Zene hossza</th>
+                <th>Kiadas eve</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="zenek"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
