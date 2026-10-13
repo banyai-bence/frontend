@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        table, td{
+            border-collapse: collapse;
+            border: 2px solid black;    
+        }
+        tbody tr:hover td{
+            background-color: turquoise;
+        }
+        td:first-child {
+            border-right: none;
+        }
+
+        td:last-child {
+            border-left: none;
+        }
+        table{
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Sorozat kereső</h1>
     <input type="text" id="keresett">
     <button id="kereses">Kereses</button>
-    <script src="1.js"></script>
+    <br><br>
 
-    <table>
+    <table id="tabla">
         <thead>
             <tr>
                 <td id="cim">cím: </td>
@@ -25,5 +48,7 @@
             </tr>
         </tbody>
     </table>
+
+    <script src="1.js"></script>
 </body>
 </html>

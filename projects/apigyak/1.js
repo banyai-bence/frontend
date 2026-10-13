@@ -9,7 +9,7 @@ async function Kereses() {
     const valasz = await fetch(url);
     const adat = await valasz.json();
 
-    console.log(adat)
+    console.log(adat.length)
     fill(adat)
 }
 
@@ -34,6 +34,10 @@ function fill(kapottAdat){
             const img = Ł("img");
             tdKep.appendChild(img);
             img.src = sorozat.image.medium 
+            img.style.width = "100%";
+            img.style.height = "100%";
+            img.style.objectFit = "cover";
+            img.style.display = "block";
         }
         else{
             tdKep.innerText = "Nincs kep"
