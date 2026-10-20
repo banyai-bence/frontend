@@ -1,11 +1,7 @@
-export default function TabButton({children}){
-    function handleClick(){
-        console.log(`Meg lett nyomva a ${children} gomb.`)
-    }
-
+export default function TabButton({children, onSelect, isSelected}){
     return(
         <li>
-            <button onClick={handleClick}>
+            <button className={isSelected ? "active" : undefined} onClick={onSelect}>
                 {children}
             </button>
         </li>
