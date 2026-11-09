@@ -1,0 +1,26 @@
+#termekek-listaja{
+  float: right;
+}
+
+#termekek-listaja div{
+  margin-bottom: 50px;
+}
+
+#uj-termek{
+  float: left;
+}
+
+#termekcss button{
+  color:  red;
+}
+
+
+#termekcss button:hover{
+  background-color:  black;
+}
+
+#uj-termek button{
+  color: blueviolet;
+  background-color: burlywood;
+}
+
