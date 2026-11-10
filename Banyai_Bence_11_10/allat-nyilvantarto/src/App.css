@@ -1,0 +1,44 @@
+#listazott-allat{
+  float: right;
+  width: 400px;
+  margin-top: 10%;
+}
+
+#listazott-allat div{
+  margin-bottom: 50px;
+}
+
+.blokk button{
+  
+  background-color: rgba(0, 128, 0, 0.507);
+}
+.blokk button:hover{
+  background-color: green;
+  color: whitesmoke;
+}
+
+#uj-allat{
+  margin-top: 10%;
+  width: 400px;
+}
+
+header{
+  border: 3px solid green;
+  width: 700px;
+  margin-left: 20%;
+}
+
+#uj-allat button{
+  width: 282%;
+  background-color: rgba(0, 128, 0, 0.507);
+}
+
+#uj-allat h2{
+  margin-right: 28%;
+  margin-bottom: 5%;
+}
+
+#uj-allat button:hover{
+  background-color: green;
+  color: whitesmoke;
+}
