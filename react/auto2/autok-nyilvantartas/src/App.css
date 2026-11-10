@@ -1,0 +1,49 @@
+header h1{
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+main{
+  display: flex;
+}
+
+#autok{
+  width: 60%;
+}
+
+#uj-autok{
+  width: 30%;
+}
+
+#autok-items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.auto{
+  width: 200px;
+  border: 2px solid midnightblue;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  padding: 15px 20px;
+}
+
+button{
+  font-size: 18px;
+  margin-top: 15px;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border-color: midnightblue;
+  background-color: rgb(79, 79, 143);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: midnightblue;
+  border-color: rgb(79, 79, 143);
+  border-width: 2px;
+  box-shadow: 0 4px 8px 0 rgba(25,25,112,0.2), 0 8px 20px 0 rgba(25,25,112,0.18);
+}
