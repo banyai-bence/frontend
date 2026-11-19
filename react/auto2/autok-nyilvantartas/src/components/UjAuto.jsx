@@ -1,25 +1,20 @@
-import { useState } from "react";
 import { felvesz, listaz } from "../data";
+import { useRef } from "react";
 
 export function UjAuto({ setAutok }) {
-  const [inputAuto, setInputAuto] = useState({
-    rendszam: "",
-    evjarat: 2026,
-    fogyasztás: 6.2,
-  });
+  const inputAuto = {
+    rendszam: useRef(),
+    evjarat: useRef(),
+    fogyasztas: useRef()
+  };
 
   function handleSave() {
-    felvesz(inputAuto);
-    setAutok(listaz());
-  }
-
-  function inputChange(inputTarget, inputValue) {
-    setInputAuto((prevInput) => {
-      return {
-        ...prevInput,
-        [inputTarget]: inputValue,
-      };
+    felvesz({
+      rendszam: inputAuto.rendszam.current.value,
+      evjarat: inputAuto.evjarat.current.value,
+      fogyasztas: inputAuto.fogyasztas.current.value,
     });
+    setAutok(listaz());
   }
 
   return (
@@ -31,28 +26,13 @@ export function UjAuto({ setAutok }) {
             <tr>
               <td>Rendszam:</td>
               <td>
-                <input
-                  type="text"
-                  id="rendszam"
-                  value={inputAuto.rendszam}
-                  onChange={(event) =>
-                    inputChange("rendszam", event.target.value)
-                  }
-                />
+                <input type="text" ref={inputAuto.rendszam} />
               </td>
             </tr>
             <tr>
               <td>Evjarat:</td>
               <td>
-                <input
-                  type="number"
-                  id="evjarat"
-                  min="1900"
-                  value={inputAuto.evjarat}
-                  onChange={(event) =>
-                    inputChange("evjarat", event.target.value)
-                  }
-                />
+                <input type="number" min="1900" ref={inputAuto.evjarat} />
               </td>
             </tr>
             <tr>
@@ -60,13 +40,9 @@ export function UjAuto({ setAutok }) {
               <td>
                 <input
                   type="number"
-                  id="fogyasztas"
                   min="0"
                   step="0.1"
-                  value={inputAuto.fogyasztas}
-                  onChange={(event) =>
-                    inputChange("fogyasztas", event.target.value)
-                  }
+                  ref={inputAuto.fogyasztas}
                 />
               </td>
             </tr>
